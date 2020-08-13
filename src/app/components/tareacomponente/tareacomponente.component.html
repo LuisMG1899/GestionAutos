@@ -1,0 +1,7 @@
+<img [src]="img" width="70%" height="50%">
+<h4>{{valor}}</h4>
+<input type="text" [(ngModel)]="valor">
+
+<div *ngIf="valor === 'Camaro'">
+    El precio de este sitio es de 4000
+</div>

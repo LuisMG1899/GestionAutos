@@ -1,0 +1,20 @@
+<div class="container-fondo">
+    <img class="fondo" src="assets/fondo.jpg">
+</div>
+
+
+<div class="nav">
+    <div class="text"> Catalogo de autos </div>
+    <div *ngIf="contador >= 1 " class="text vendidos">Tenemos {{contador}} autos Disponibles!</div>
+</div>
+<div class="white-space"></div>
+
+<div class="lema">
+    <p> Carros a la altura, Enfoca tu mirada al futuro.</p>
+</div>
+
+    <div class="container" *ngFor="let item of autos"> 
+        <app-auto (autoVendido)="addCarros($event)" [auto] = "item"></app-auto>
+     </div>
+<br><br><br><br><br><br>
+

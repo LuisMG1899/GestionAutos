@@ -1,0 +1,18 @@
+<div class="container-auto">
+    <div class="container-img">
+        <img [src]="auto.img" [alt]="auto.nombre" >
+    <p> Autos rapidos y fiables. </p>
+    </div>
+    <div class="container-info">
+        <h2>{{auto.nombre}}</h2>
+
+        <div class="container-text">
+        <p>{{auto.descripcion}}</p>
+        <button *ngIf="contador >= 0 && contador <=9"  (click)="comprar(auto.id)">Comprar ahora </button>
+        <button *ngIf="contador >= 10"  >Sin existencia</button>
+        </div>
+    </div>
+
+
+</div>
+
