@@ -1,0 +1,15 @@
+.router-link-active{
+   background-color: white;
+   color: blue;
+}
+
+.router-link-active a:hover{
+    background-color: blue;
+    color: white;
+ }
+a{
+    text-decoration: none !important; 
+ }
+ a:hover{
+    color: white !important;
+  }

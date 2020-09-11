@@ -1,0 +1,13 @@
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" *ngFor="let item of imagenes"> 
+            <img width="300px" height="auto" [src]="item.image" [alt]="item.alt">
+
+        </div>
+       
+        
+    </div>
+
+</div>
