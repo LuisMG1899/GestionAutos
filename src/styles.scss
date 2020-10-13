@@ -5,4 +5,43 @@ body{ height: 100%;
 
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.sidebar[data-color="danger"] li.active > a {
+    background-color: #bb4a4a !important;
+    // box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgb(222 34 20 / 50%)
+}
+
+.sidebar-wrapper {
+    transition-property: top,bottom, width;
+    transition-duration: .2s,.2s, .35s;
+    transition-timing-function: linear,linear,ease;
+    -webkit-overflow-scrolling: touch;
+    background-image: linear-gradient(to left bottom, #617999, #617999, #617999, #617999, #617999);
+}
+
+.sidebar .logo {
+    padding: 15px 0px;
+    margin: 0;
+    display: block;
+    position: relative;
+    z-index: 4;
+    background-image: linear-gradient(to left bottom, #617999, #617999, #617999, #617999, #617999);
+}
+
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+    background-color:#bb4a4a !important;
+    color: #FFFFFF;
+}
+
+.card .card-header-warning .card-icon, .card .card-header-warning .card-text, .card .card-header-warning:not(.card-header-icon):not(.card-header-text), .card.bg-warning, .card.card-rotate.bg-warning .front, .card.card-rotate.bg-warning .back {
+    background: linear-gradient(60deg, #ff2626, #633b0b) !important;
+}
+
+.card .card-header-success .card-icon, .card .card-header-success .card-text, .card .card-header-success:not(.card-header-icon):not(.card-header-text), .card.bg-success, .card.card-rotate.bg-success .front, .card.card-rotate.bg-success .back {
+    background: linear-gradient(60deg, #734f4f, #ec3e16) !important;
+}
+

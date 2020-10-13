@@ -1,4 +1,4 @@
-<div class="container-fondo">
+<!-- <div class="container-fondo">
     <img class="fondo" src="assets/fondo.jpg">
 </div>
 
@@ -11,10 +11,18 @@
 
 <div class="lema">
     <p> Carros a la altura, Enfoca tu mirada al futuro.</p>
-</div>
+</div> -->
 
-    <div class="container" *ngFor="let item of autos"> 
-        <app-auto (autoVendido)="addCarros($event)" [auto] = "item"></app-auto>
-     </div>
-<br><br><br><br><br><br>
+    
+       <div class="container">
+           <div class="row">
+               <div class="col-md-4" *ngFor="let item of autos">
+                   <app-auto class="col-md-4"  [auto] = "item"></app-auto>
+
+               </div>
+           </div>
+       </div>
+      
+    
+
 

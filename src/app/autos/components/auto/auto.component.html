@@ -1,18 +1,25 @@
-<div class="container-auto">
-    <div class="container-img">
-        <img [src]="auto.img" [alt]="auto.nombre" >
-    <p> Autos rapidos y fiables. </p>
-    </div>
+<!-- <div class="container-auto">
+  
     <div class="container-info">
         <h2>{{auto.nombre}}</h2>
 
         <div class="container-text">
-        <p>{{auto.descripcion}}</p>
-        <button *ngIf="contador >= 0 && contador <=9"  (click)="comprar(auto.id)">Comprar ahora </button>
+        <p>{{auto.precioMercado}}</p>
+        
         <button *ngIf="contador >= 10"  >Sin existencia</button>
         </div>
     </div>
 
 
-</div>
+</div> -->
 
+
+        <div class="card " style="">
+            <img class="card-img-top" src="assets/camaro.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{auto.nombre}}</h5>
+              <p class="card-text">Precio: {{auto.precioMercado}}</p>
+              <a href="#" class="btn btn-success">Detalles</a>
+            </div>
+          </div>
+    

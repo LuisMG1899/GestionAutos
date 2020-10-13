@@ -13,3 +13,19 @@ a{
  a:hover{
     color: white !important;
   }
+  .router-link-active {
+   background-color: #dc0303 !important;
+   color: white;
+}
+  .mat-toolbar.mat-primary {
+   background-image: linear-gradient(to right top, #051937, #062344, #052e50, #03395d, #00456a);
+   color: #fff;
+}
+
+::ng-deep footer {
+   padding: 50px 0px;
+   margin-top: 20px;
+   top: 20px;
+   position: relative;
+   background-image: linear-gradient(to right top, #051937, #062344, #052e50, #03395d, #00456a);
+}

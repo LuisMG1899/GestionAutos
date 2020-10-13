@@ -1,0 +1,58 @@
+<h2>Registra auto</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label>Nombre</label>
+            <dx-text-box 
+            stylingMode="filled"
+            [(ngModel)]="this.autoImputModel.nombre"
+        >
+           
+        </dx-text-box>
+        </div>
+        <div class="form-group col-md-4">
+            <label>Numero Motor</label>
+            <dx-text-box 
+            stylingMode="filled"
+            [(ngModel)]="this.autoImputModel.numeroMotor"
+            type="number"
+        >
+           
+        </dx-text-box>
+        </div>
+        <div class="form-group col-md-4">
+            <label>Fecha de Ensamble</label>
+            <dx-date-box
+            [(value)]="fechaAuto"
+            stylingMode="filled"
+            displayFormat="dd-MM-yyyy"
+            type="date">
+        </dx-date-box>
+         
+        </div>
+        <div class="form-group col-md-4">
+            <label>Precio de Mercado</label>
+            <dx-number-box
+            stylingMode="filled"
+            [(ngModel)]="this.autoImputModel.precioMercado"
+        >
+          
+        </dx-number-box>
+        </div>
+        <div class="form-group col-md-4">
+            <label>Marca</label>
+        <dx-select-box
+                [dataSource]="data"
+                displayExpr="nombre"
+                placeholder="Selecciona una opción"
+                valueExpr="id"
+                stylingMode="filled"
+                [(ngModel)]="this.autoImputModel.marcaId"
+        ></dx-select-box>
+        </div>
+    </div>
+</div>
+  
+<button (click)="registrarAutoClicked()" class="btn btn-success ml-3">Registrar </button>
+

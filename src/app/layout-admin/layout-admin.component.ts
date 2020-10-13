@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginResponse } from '@core/models/loginResponse.model';
+import { UserService } from '@core/services/user.service';
 
 @Component({
   selector: 'app-layout-admin',
@@ -6,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout-admin.component.scss']
 })
 export class LayoutAdminComponent implements OnInit {
-
-  constructor() { }
+  user: LoginResponse;
+  constructor(private userService: UserService) { }
   title = 'GestionAutos';
   userName: string;
   isMaps(path) {
@@ -18,5 +20,6 @@ export class LayoutAdminComponent implements OnInit {
     console.log(texto);
   }
   ngOnInit(): void {
+    this.user = this.userService.getUser();
   }
 }

@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header card-header-success  ">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-7">
+                    <h4 class="card-title  ">
+                        Autos
+                    </h4>
+                    <p class="card-category  ">Autos de marca</p>
+                </div>
+                <button class="btn btn-success align-content-end  col-auto " routerLink="registrar">Registrar auto   </button>
+            </div>
+        </div>
+      
+    </div>
+    <div class="card-body table-responsive">
+        <table class="table table-hover">
+            <thead class="text-header">
+                <th>Nombre</th>
+                <th>Motor</th>
+                <th>Precio</th>
+                <th>Acciones </th>
+            </thead>
+            <tbody *ngFor="let auto of this.autos">
+                <tr >
+                    <td>{{auto.nombre}}</td>
+                    <td> {{auto.numeroMotor}}</td>
+                    <td> {{auto.precioMercado}}</td>
+                    <td class="color">  <mat-icon [routerLink]="['editar', auto.autoId]" class="icons ml-2 ">create</mat-icon>
+                        <mat-icon (click)="eliminarAuto(auto.autoId)" class="icons ml-2 ">delete</mat-icon></td>
+                </tr>
+                
+               
+            </tbody>
+        </table>
+    </div>
+</div>

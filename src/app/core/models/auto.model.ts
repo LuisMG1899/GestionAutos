@@ -1,9 +1,9 @@
 export interface Auto{
-    id:string;
-    nombre:string;
-    descripcion:string;
-    modelo:string;
-    año:string;
-    img:string;
+    autoId: string,
+    nombre: string,
+    numeroMotor: string,
+    fechaEsamble: Date,
+    precioMercado: number,
+    marcaId: string
 }
 

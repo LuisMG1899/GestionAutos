@@ -1,0 +1,25 @@
+::ng-deep .mat-button.btn.btn-success, .mat-raised-button.btn.btn-success, .mat-raised-button.btn:not([class*=mat-elevation-z]).btn-success, .btn.btn-success {
+    color: white;
+    background-color: #6787b7;
+    border-color: #fdfdfd !important;
+    border: solid 1px;
+}
+
+::ng-deep .btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa {
+
+    top: 1px;
+
+}
+
+::ng-deep .color .mat-icon {
+    color: #617999 !important;
+    cursor: pointer;
+}
+
+.icons:hover{
+    color:#bb4a4a !important;
+    transition-duration: 0.2s;
+}
+.text-header{
+    color: #617999 !important;
+}

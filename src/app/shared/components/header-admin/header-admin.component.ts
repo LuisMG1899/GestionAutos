@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { Router } from '@angular/router';
 import { ROUTES } from '../sidebar-admin/sidebar-admin.component';
+import { UserService } from '@core/services/user.service';
 
 @Component({
   selector: 'app-header-admin',
@@ -14,7 +15,8 @@ export class HeaderAdminComponent implements OnInit {
   mobile_menu_visible: any = 0;
   private toggleButton: any;
   private sidebarVisible: boolean;
-  constructor(location: Location, private element: ElementRef, private router: Router) {
+  constructor(location: Location, private element: ElementRef, 
+    private router: Router, private userService: UserService) {
     this.location = location;
     this.sidebarVisible = false;
   }
@@ -117,7 +119,10 @@ export class HeaderAdminComponent implements OnInit {
         return this.listTitles[item].title;
       }
     }
-    return 'Dashboard';
+    return 'Gestion Autos';
   }
-
+  cerrarSesion(): void {
+    this.userService.cerrarSesion();
+    this.router.navigate(['./']);
+  }
 }
